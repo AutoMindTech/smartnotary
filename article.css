@@ -1,0 +1,177 @@
+/* === smartnotary-article.css === */
+/* تصميم بطاقة مقال قانوني - خفيف، متجاوب، WCAG */
+:root {
+    --ac-card-bg: #1e293b;
+    --ac-border: rgba(255, 255, 255, 0.08);
+    --ac-primary: #6366f1;
+    --ac-secondary: #10b981;
+    --ac-text: #f5f5f5;
+    --ac-heading: #ffffff;
+    --ac-dim: #b0b8c4;
+    --ac-radius: 24px;
+    --ac-padding: 36px;
+}
+
+.legal-article-card {
+    max-width: 1000px;
+    margin: 25px auto;
+    background: var(--ac-card-bg);
+    border-radius: var(--ac-radius);
+    padding: var(--ac-padding);
+    border: 1px solid var(--ac-border);
+    box-shadow: 0 8px 35px rgba(0,0,0,0.4);
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.9;
+    color: var(--ac-text);
+    position: relative;
+    overflow: hidden;
+}
+.legal-article-card * { box-sizing: border-box; }
+
+h1.ac-title {
+    color: var(--ac-heading);
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    font-weight: 800;
+    margin: 10px 0 25px;
+    line-height: 1.4;
+    text-align: center;
+}
+.ac-h2 {
+    color: var(--ac-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 35px 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid rgba(99,102,241,0.3);
+    padding-bottom: 10px;
+}
+.ac-h2 i, .ac-h2 svg { color: var(--ac-primary); font-size: 1.4rem; }
+.ac-h3 {
+    color: var(--ac-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 25px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.ac-h3 i { color: var(--ac-secondary); font-size: 1.1rem; }
+
+p { color: var(--ac-text); margin-bottom: 16px; font-size: 1rem; }
+strong { color: #ffffff; }
+
+.ac-highlight-box {
+    background: rgba(99,102,241,0.06);
+    border-right: 4px solid var(--ac-primary);
+    border-radius: 0 14px 14px 0;
+    padding: 18px 22px;
+    margin: 22px 0;
+}
+.ac-highlight-box p { margin: 0; color: #e2e8f0; }
+
+.ac-table-responsive {
+    overflow-x: auto;
+    margin: 25px 0;
+    -webkit-overflow-scrolling: touch;
+}
+.ac-table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 14px;
+    overflow: hidden;
+}
+th {
+    background: rgba(99,102,241,0.25);
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    font-weight: 700;
+    border-bottom: 2px solid var(--ac-primary);
+}
+td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--ac-border);
+    color: var(--ac-text);
+}
+tr:hover td { background: rgba(255,255,255,0.03); }
+
+.ac-cta-section {
+    background: linear-gradient(135deg, rgba(99,102,241,0.15) 0%, rgba(16,185,129,0.06) 100%);
+    border: 2px solid rgba(99,102,241,0.3);
+    border-radius: 18px;
+    padding: 28px;
+    text-align: center;
+    margin: 32px 0;
+}
+.ac-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 11px 26px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none !important;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.25s;
+    cursor: pointer;
+    border: none;
+}
+.ac-btn-primary {
+    background: linear-gradient(135deg, #6366f1, #10b981);
+    color: white !important;
+    box-shadow: 0 6px 18px rgba(99,102,241,0.4);
+}
+.ac-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,102,241,0.6); }
+
+.ac-share-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+.ac-share-link {
+    padding: 7px 14px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.07);
+    color: #e2e8f0 !important;
+    text-decoration: none !important;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+.ac-share-link:hover { background: rgba(99,102,241,0.25); }
+
+.ac-desktop-banner {
+    background: linear-gradient(160deg, #1a1f35, #1e293b);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 28px;
+    margin: 35px 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.ac-faq-item {
+    background: rgba(255,255,255,0.025);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    border: 1px solid var(--ac-border);
+}
+.ac-faq-item h3 { margin-top: 0 !important; }
+
+@media (max-width: 768px) {
+    .legal-article-card { --ac-padding: 20px; margin: 10px; }
+    .ac-desktop-banner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+    .legal-article-card { --ac-padding: 14px; --ac-radius: 16px; }
+}
