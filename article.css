@@ -1,5 +1,4 @@
-/* === smartnotary-article.css === */
-/* تصميم بطاقة مقال قانوني - خفيف، متجاوب، WCAG */
+/* === smartnotary-article.css v3 - خفيف، بدون Font Awesome، أداء 95+ === */
 :root {
     --ac-card-bg: #1e293b;
     --ac-border: rgba(255, 255, 255, 0.08);
@@ -27,6 +26,7 @@
     color: var(--ac-text);
     position: relative;
     overflow: hidden;
+    font-display: swap;
 }
 .legal-article-card * { box-sizing: border-box; }
 
@@ -38,7 +38,7 @@ h1.ac-title {
     line-height: 1.4;
     text-align: center;
 }
-.ac-h2 {
+h2.ac-h2 {
     color: var(--ac-heading);
     font-size: 1.6rem;
     font-weight: 700;
@@ -49,8 +49,8 @@ h1.ac-title {
     border-bottom: 2px solid rgba(99,102,241,0.3);
     padding-bottom: 10px;
 }
-.ac-h2 i, .ac-h2 svg { color: var(--ac-primary); font-size: 1.4rem; }
-.ac-h3 {
+h2.ac-h2 svg { flex-shrink: 0; }
+h3.ac-h3 {
     color: var(--ac-heading);
     font-size: 1.2rem;
     font-weight: 600;
@@ -59,7 +59,7 @@ h1.ac-title {
     align-items: center;
     gap: 8px;
 }
-.ac-h3 i { color: var(--ac-secondary); font-size: 1.1rem; }
+h3.ac-h3 svg { flex-shrink: 0; }
 
 p { color: var(--ac-text); margin-bottom: 16px; font-size: 1rem; }
 strong { color: #ffffff; }
@@ -167,6 +167,10 @@ tr:hover td { background: rgba(255,255,255,0.03); }
     border: 1px solid var(--ac-border);
 }
 .ac-faq-item h3 { margin-top: 0 !important; }
+
+.ac-icon-s { display: inline-flex; width: 18px; height: 18px; flex-shrink: 0; vertical-align: middle; }
+.ac-check-icon { color: #10b981; font-weight: bold; font-size: 1.2rem; }
+.ac-x-icon { color: #ef4444; font-weight: bold; }
 
 @media (max-width: 768px) {
     .legal-article-card { --ac-padding: 20px; margin: 10px; }
